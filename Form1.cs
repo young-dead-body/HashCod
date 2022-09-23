@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,7 +34,7 @@ namespace WindowsFormsApp1
 
             string sde = textBox1.Text; 
 
-            String Mes = textBox1.Text;
+            String Mes = textBox1.Text.Replace(" ", "");
             int lenMes = Mes.Length;
 
             int RSM = lenMes % lenS;
@@ -105,6 +106,8 @@ namespace WindowsFormsApp1
             {
                 listBox1.Items.Add(M[j]);
             }
+
+            textBox9.Text = $"Message Array Count = {M.Count} and Result Array Count = {RESULT.Count}";
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -139,6 +142,36 @@ namespace WindowsFormsApp1
                     textBox7.Text += "1";
                 }
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string path = $"{textBox8.Text}.txt";
+            if (!File.Exists(path))
+            {
+                using (StreamWriter sw = File.CreateText(path))
+                {
+                    sw.WriteLine(RESULT[0]);
+                    for (int i = 0; i < M.Count; i++) {
+                        sw.WriteLine(M[i]);
+                        sw.WriteLine(separation("-"));
+                        sw.WriteLine(RESULT[i+1]);
+                        if (i % 2 > 0) 
+                        {
+                            sw.WriteLine(separation("="));
+                        }
+                    }
+                    
+                }
+            }
+        }
+
+        private string separation(string sign) {
+            string str = "";
+            for (int i = 0; i < M[1].ToString().Length; i++) {
+                str += sign;
+            }
+            return str;
         }
     }
 }

@@ -44,11 +44,11 @@ namespace WindowsFormsApp1
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox1
@@ -181,48 +181,38 @@ namespace WindowsFormsApp1
             this.textBox3.Size = new System.Drawing.Size(171, 22);
             this.textBox3.TabIndex = 4;
             // 
-            // listBox1
+            // panel2
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(560, 67);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 84);
-            this.listBox1.TabIndex = 7;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(538, 261);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(142, 23);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Вывод в документ";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.panel2.Controls.Add(this.textBox8);
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Location = new System.Drawing.Point(568, 223);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 100);
+            this.panel2.TabIndex = 10;
+            this.panel2.Visible = false;
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(538, 299);
+            this.textBox8.Location = new System.Drawing.Point(29, 58);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(142, 22);
-            this.textBox8.TabIndex = 9;
+            this.textBox8.TabIndex = 11;
             // 
-            // textBox9
+            // button2
             // 
-            this.textBox9.Location = new System.Drawing.Point(560, 177);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(142, 22);
-            this.textBox9.TabIndex = 10;
+            this.button2.Location = new System.Drawing.Point(29, 20);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(142, 23);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "Вывод в документ";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(776, 333);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
@@ -233,6 +223,8 @@ namespace WindowsFormsApp1
             this.Text = "ЛБ 1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,10 +247,9 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Button button2;
     }
 }
 

@@ -17,7 +17,6 @@ namespace WindowsFormsApp1
         public Form1()
         {
             InitializeComponent();
-            listBox1.Visible = false;
         }
 
         ArrayList M = new ArrayList();
@@ -102,12 +101,7 @@ namespace WindowsFormsApp1
                 RESULT.Add(secondResult);
             }
 
-            for (int j = 0; j < M.Count; j++)
-            {
-                listBox1.Items.Add(M[j]);
-            }
-
-            textBox9.Text = $"Message Array Count = {M.Count} and Result Array Count = {RESULT.Count}";
+            panel2.Visible = true;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
